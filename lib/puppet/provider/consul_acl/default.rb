@@ -99,7 +99,7 @@ Puppet::Type.type(:consul_acl).provide(
       rules = ""
     end
     type = @resource[:type]
-    id = self.get_resource_id(name)
+    id = @resource[:id]
     if id
       if @property_flush[:ensure] == :absent
         put_acl("destroy/#{id}", nil)
