@@ -111,7 +111,8 @@ Puppet::Type.type(:consul_acl).provide(
                           "rules" => "#{rules}" })
 
     else
-      put_acl('create', { "name"  => "#{name}",
+      put_acl('create', { "id"    => "#{id}",
+                          "name"  => "#{name}",
                           "type"  => "#{type}",
                           "rules" => "#{rules}" })
     end
